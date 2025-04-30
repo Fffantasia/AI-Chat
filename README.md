@@ -1,2 +1,3 @@
-# AI-Chat
-Example of an AI Chatbot
+To start the project run run_app.bat
+
+If you need to install the venv environment run inside the backend folder "python -m venv venv", ".\venv\Scripts\activate" and "pip install -r requirements.txt"
