@@ -1,13 +1,89 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background);
+  color: var(--text);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+* {
+  transition: background-color 0.5s ease,
+    border-color 0.5s ease;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+}
+
+.dark * {
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+:root {
+  --background: #ffffff;
+  --background-alt: #f9f9f9;
+  --text: #000000;
+  --text-alt: #333333;
+  --border: #ddd;
+  --assistant-msg: #f1f0f0;
+  --user-msg: #daf1ff;
+  --input-bg: #f0f0f0;
+  --copy-hover: #007bff;
+  --scroll-btn: #007bff;
+  --scroll-btn-hover: #0056b3;
+  --btn-bg: #007bff;
+  --btn-hover-bg: #0056b3;
+  --spinner-bg: #eee;
+  --spinner-top: #007acc;
+}
+
+.dark {
+  --background: #1e1e1e;
+  --background-alt: #2a2a2a;
+  --text: #f0f0f0;
+  --text-alt: #ccc;
+  --border: #444;
+  --assistant-msg: #444;
+  --user-msg: #0056b3;
+  --input-bg: #333;
+  --copy-hover: #66b2ff;
+  --scroll-btn: #007bff;
+  --scroll-btn-hover: #0056b3;
+  --btn-bg: #007bff;
+  --btn-hover-bg: #333;
+  --spinner-bg: #444;
+  --spinner-top: #66b2ff;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.4);
 }

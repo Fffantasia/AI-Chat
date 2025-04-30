@@ -1,0 +1,79 @@
+.toggle-switch {
+  width: 56px;
+  height: 28px;
+  padding: 2px;
+  border-radius: 999px;
+  position: relative;
+  background: linear-gradient(to bottom, #cbe8ff, #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-switch.dark {
+  background-color: #0f0f1f;
+  background-image:
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(white 1px, transparent 1px),
+    linear-gradient(to right, #0f0f1f 50%, #1e1e1e);
+  background-size:
+    10px 14px,
+    13px 17px,
+    11px 15px,
+    100% 100%;
+  background-position:
+    2px 10px,
+    6px 14px,
+    10px 12px,
+    center;
+  background-repeat: repeat;
+  background-blend-mode: screen;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.toggle-switch .icon {
+  position: absolute;
+  font-size: 14px;
+  text-align: center;
+  z-index: 2;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-switch .icon.left {
+  left: 6px;
+  color: #8ecae6;
+}
+
+.toggle-switch .icon.right {
+  right: 6px;
+  color: #f5b301;
+}
+
+.toggle-switch .slider {
+  position: relative;
+  flex: 1;
+  height: 100%;
+}
+
+.toggle-switch .circle {
+  position: absolute;
+  top: 0;
+  left: 1px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #8d8d8d;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.toggle-switch.dark .circle {
+  background-color: white;
+  transform: translateX(25px);
+}
