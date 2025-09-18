@@ -1,17 +1,15 @@
 @echo off
-echo Iniciando backend con FastAPI...
+echo Starting backend...
 
-REM Ir a carpeta del backend y activar entorno virtual
+REM Go to the backend folder and activate the virtual environment
 cd backend
 call venv\Scripts\activate
 
-REM Ejecutar FastAPI en nueva terminal
+REM Execute FastAPI in a new terminal
 start cmd /k "uvicorn main:app --reload"
 
-REM Volver a raíz y lanzar React
+REM Go to the root folder and start React
 cd ..
-echo Iniciando frontend con React...
+echo Starting frontend...
 npm start
-
-REM Esperar después de cerrar npm start
 pause

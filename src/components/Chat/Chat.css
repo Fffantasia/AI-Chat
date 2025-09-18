@@ -38,8 +38,6 @@
   font-family: sans-serif;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  width: 100%;
   background-color: var(--background);
   color: var(--text);
 }
@@ -52,26 +50,6 @@
   padding: 8px 12px;
   background-color: var(--background);
   border-bottom: 1px solid var(--border);
-}
-
-.clear-chat-button {
-  background-color: var(--background-alt);
-  border: none;
-  color: #ff4d4f;
-  font-size: 18px;
-  padding: 8px;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.2s, color 0.2s, transform 0.2s;
-}
-
-.clear-chat-button:hover {
-  background-color: #ffecec;
-  color: #d9363e;
-  transform: scale(1.05);
 }
 
 .chat-box {

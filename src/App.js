@@ -1,15 +1,15 @@
 import React from "react";
-//import Chat from "@/components/Chat/Chat";
-import Chat from "./components/Chat/Chat";
+import "./App.css";
+import Chat from "components/Chat/Chat";
 
 function App() {
   return (
-    <div style={{ padding: "20px", fontFamily: "sans-serif" }}>
-      <h1>Chat con IA</h1>
-      <div style={{ height: '600px' }}>
+    <main>
+      <h1 className="chat-title">Juniper Chat</h1>
+      <div className="chat-container">
         <Chat />
       </div>
-    </div>
+    </main>
   );
 }
 

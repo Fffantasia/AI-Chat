@@ -37,7 +37,16 @@
   }
 }
 
-.chat {
-  width: 50vw;
-  height: 80vh;
+main{
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.chat-title{
+  display: flex;
+  justify-content: center;
+}
+
+.chat-container {
+  height: 50vh;
 }

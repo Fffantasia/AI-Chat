@@ -1,0 +1,84 @@
+.clear-button {
+  background-color: var(--background-alt);
+  border: none;
+  color: #ff4d4f;
+  font-size: 18px;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.clear-button:hover {
+  background-color: var(--cancel-hover);
+  color: #d9363e;
+  transform: scale(1.05);
+}
+
+.dark .clear-button:hover {
+  background-color: var(--cancel-hover);
+  color: #ff6666;
+}
+
+.confirm-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.confirm-modal {
+  background: var(--background);
+  color: var(--text-alt);
+  padding: 1.5rem;
+  border-radius: 12px;
+  max-width: 400px;
+  text-align: center;
+}
+
+.confirm-modal h3 {
+  margin-top: 0;
+  color: var(--text);
+}
+
+.confirm-modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.confirm-modal-button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.confirm {
+  background: var(--btn-bg);
+  color: white;
+}
+
+.confirm:hover {
+  background: var(--btn-hover-bg);
+}
+
+.cancel {
+  background: var(--background-alt);
+  color: var(--text);
+}
+
+.cancel:hover {
+  background: var(--cancel-hover);
+}

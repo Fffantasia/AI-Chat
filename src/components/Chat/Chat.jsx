@@ -1,21 +1,22 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Chat.css";
 import { FiCopy, FiCheck } from "react-icons/fi";
-import { IoTrash, IoSend, IoStop, IoArrowDown } from "react-icons/io5";
-//import ThemeToggle from "@/components/ThemeToggle/ThemeToggle";
-import ThemeToggle from "./../ThemeToggle/ThemeToggle";
+import { IoSend, IoStop, IoArrowDown } from "react-icons/io5";
+import ThemeToggle from "components/ThemeToggle/ThemeToggle";
+import ClearButton from "components/ClearButton/ClearButton";
+
+const loadingPhrases = [
+  "Cargando la inteligencia artificial",
+  "Desenrollando parámetros neuronales",
+  "Despertando a Falcon 🦅",
+  "Preparando respuestas brillantes",
+  "Haciendo café para la IA ☕️",
+  "Pensando en chistes inteligentes",
+  "Conectando sinapsis digitales",
+  "Optimizando tokens y pensamientos"
+]
 
 export default function Chat() {
-  const loadingPhrases = [
-    "Cargando la inteligencia artificial",
-    "Desenrollando parámetros neuronales",
-    "Despertando a Falcon 🦅",
-    "Preparando respuestas brillantes",
-    "Haciendo café para la IA ☕️",
-    "Pensando en chistes inteligentes",
-    "Conectando sinapsis digitales",
-    "Optimizando tokens y pensamientos"
-  ];
   const [currentPhrase, setCurrentPhrase] = useState(loadingPhrases[0]);
   const lastPhrasesRef = useRef([loadingPhrases[0]]);
   const [isPhraseFading, setIsPhraseFading] = useState(false);
@@ -85,10 +86,8 @@ export default function Chat() {
   }, [messages]);
 
   const handleClearChat = () => {
-    const confirmed = window.confirm("¿Estás seguro de que deseas borrar esta conversación?");
-    if (!confirmed) return;
-
     handleStop();
+    setShowScrollButton(false);
     localStorage.removeItem("currentChat");
     setMessages([]);
   };
@@ -257,9 +256,7 @@ export default function Chat() {
     <div className="chat-container">
       <div className="chat-toolbar">
         <ThemeToggle />
-        <button onClick={handleClearChat} className="clear-chat-button">
-          <IoTrash />
-        </button>
+        <ClearButton handleClear={handleClearChat}/>
       </div>
 
       <div className="chat-box" ref={chatBoxRef} onScroll={handleScroll}>
